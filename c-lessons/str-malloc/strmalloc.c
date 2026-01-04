@@ -1,34 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <strings.h>
 
 int main()
 {
  int n = 0;
 
- int *pmemory;
-
- printf("Type how many array strings you want: ");
- scanf("%d", &n);
-
- pmemory = malloc(n * sizeof(char));
-
- char *arrayStr[*pmemory];
+ char buff[5];
  
- for (int i = 0; i < n; i ++)
- {
-  printf("String %d: ", i + 1);
-  scanf("%s",&arrayStr[i]);
- };
- 
- for (int j = 0; j < n; j ++)
- {
-  printf("String %d : is %s",  j + 1, arrayStr[j]);
- };  
- 
- free(pmemory);
+ printf("Type your text here: ");
+ scanf("%s", buff);
+
+ printf("This is your text %s\n", buff);
 
  return 0;
- 
 }
-
