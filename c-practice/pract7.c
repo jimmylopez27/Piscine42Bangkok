@@ -1,19 +1,25 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 
 int main()
 {
- printf("Type the number here: ");
- int num;
+ printf("Type your number here: ");
+ int num = 0;
  scanf("%d", &num);
- 
- int newarrangement = 0 ;
 
- for(int i = num; i > 0; i --)
+ while (num != 0)
  {
-  newarrangement = i;
-  printf("%d\n", newarrangement);
- }
+  for (int i = 1; i < 2; i++)
+  {
+   int div = pow(10, i);
+   float remnum = num % div;
+   return remnum;
+  }
+ 
+ num = remnum; 
+ printf("%d", num); 
+
+ };
 
  return 0;
 }
