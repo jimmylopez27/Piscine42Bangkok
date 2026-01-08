@@ -1,23 +1,20 @@
 #include <stdio.h>
-#include <math.h>
 
 int main()
 {
-  printf("Type your number here: ");
-  int num;
-  scanf("%d", &num);
-  printf("The reverse of the number %d is : ", num);
-  for (int i = 1; i < 10; i ++ )
-  {
-   int div = pow(10, i);
-   int rem = (num * 10 / div) % 10;
-   printf("%d", rem);
-   
-   if (rem < 1 )
-   {
-    break;
-   }
-  };
+ printf("Type your number here: ");
+ int num = 0; 
+ scanf("%d", &num);
 
+ printf("Reverse: ");
+ while (num != 0)
+ {
+  int digits = num % 10;
+  printf("%d", digits);
+  num = num / 10;   
+ }
+
+ printf("\n");
  return 0;
+
 }
