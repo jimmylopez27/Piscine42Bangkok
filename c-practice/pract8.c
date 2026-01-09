@@ -24,16 +24,26 @@ int main()
   scanf("%d", &arraynum[i]);
  }
 
- int num = arraynum[0];
+ int largenum = arraynum[0];
  for (int i = 1; i < n; i ++)
  {
-  if (arraynum[i] > num)
+  if (arraynum[i] > largenum)
   {
-   num = arraynum[i];
+   largenum = arraynum[i];
   }
  }
 
- printf("The largest is %d", num);
+ int shortnum = arraynum[0];
+ for (int i = 0; i < n; i ++)
+ {
+  if (arraynum[i] < shortnum)
+  {
+   shortnum = arraynum[i];
+  }
+ }
+ 
+ printf("The shortest is %d\n", shortnum);
+ printf("The largest is %d\n", largenum);
  free(pmem);
 
  return 0;
