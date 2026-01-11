@@ -7,8 +7,7 @@ int main()
  printf("How many numbers you want? ");
  scanf("%d", &n);
 
- int *pmem;
- pmem = malloc(n * sizeof(int));
+ int *pmem = malloc(n * sizeof(int));
 
  if (pmem == NULL)
  {
@@ -16,22 +15,31 @@ int main()
   return 1;
  }
 
- int arrnum[*pmem];
  for (int i = 0; i < n; i ++)
  {
   printf("Type your number %d: ", i);
-  scanf("%d", &arrnum[i]);
+  scanf("%d", &pmem[i]);
  } 
 
- int repnum = arrnum[0];
  for (int i = 0; i < n; i ++)
  {
-  if (arrnum[i] != repnum)
+  int count = 0;
+  
+  for (int j = 0; j < n; j ++)
   {
-   repnum = arrnum[i];
+   if (pmem[i] == pmem[j])
+   {
+    count ++;
+   }
+  } 
+  
+  if (count == 1)
+  {
+   printf("The unique number is: %d\n", pmem[i]);
   }
  }
-
- printf("\n The rep num is: %d\n", repnum);
  
+ free(pmem);
+
+ return 0;
 }
