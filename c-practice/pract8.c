@@ -23,15 +23,15 @@ int main()
 		scanf("%d", &arrnum[i]);
 	}
 
-	int sum = 0;
+	float sum = 0;
 	for (int i = 0; i < n; i ++)
 	{
 		sum += arrnum[i];
 	}	
 
 	float avg = sum / n;
-	printf("The sum of the numbers is: %d\n", sum);
-	printf("The average of the numbers is: %.2f\n",avg);
+	printf("The sum of the numbers is: %.1f\n", sum);
+	printf("The average of the numbers is: %.1f\n",avg);
 
 	return 0;
 }
