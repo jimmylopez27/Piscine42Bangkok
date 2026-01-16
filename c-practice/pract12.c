@@ -22,27 +22,24 @@ int main()
 		scanf("%d", &arrnum[i]);
 	}	
 
+	int test;
 	for (int i = 0; i < n; i ++)
-	{	
-		int count = 0;
-		int num = arrnum[i];
-		
-		for (int j = 1; j < n; j ++)
+	{
+		int count = 1;
+		test = arrnum[i];
 
-			if (num == arrnum[j])
+		for (int j = 0; j < n; j ++)	
+		{
+			if (test == arrnum[j])
 			{
 				count++;
+				printf("Test num is %d and the arrnum[%d] is %d\n", test, j, arrnum[j]);
 			}
 			else
 			{
-				continue;
+				count = 1;
 			}
-
-		if (count == 0)
-		{
-			printf("The uniqu number is %d ", num);
 		}
-
 	}
 
 	
