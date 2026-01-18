@@ -25,7 +25,7 @@ int main()
 	int test;
 	for (int i = 0; i < n; i ++)
 	{
-		int count = 1;
+		int count = 0;
 		test = arrnum[i];
 
 		for (int j = 0; j < n; j ++)	
@@ -33,16 +33,20 @@ int main()
 			if (test == arrnum[j])
 			{
 				count++;
-				printf("Test num is %d and the arrnum[%d] is %d\n", test, j, arrnum[j]);
 			}
 			else
 			{
-				count = 1;
+				count = 0;
 			}
+		}
+		
+		if (count == 1)
+		{
+			printf("The unique num is: %d", test);
 		}
 	}
 
-	
+	free(arrnum);	
 	return 0;
 }
 
