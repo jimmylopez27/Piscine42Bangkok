@@ -25,25 +25,23 @@ int main()
 	int test;
 	for (int i = 0; i < n; i ++)
 	{
-		int count = 0;
 		test = arrnum[i];
 
 		for (int j = 0; j < n; j ++)	
 		{
 			if (test == arrnum[j])
 			{
-				count++;
+				printf("The unique num is: %d\n", test);
+				break;
 			}
-			else
+			else if (test != arrnum[j])
 			{
-				count = 0;
+				printf("The unique num is: %d", test);
+				break;
 			}
+			
 		}
 		
-		if (count == 1)
-		{
-			printf("The unique num is: %d", test);
-		}
 	}
 
 	free(arrnum);	
