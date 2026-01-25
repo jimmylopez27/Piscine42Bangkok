@@ -8,8 +8,9 @@ int main()
 	scanf("%d", &n);
 
 	int *arrnum = malloc(n * sizeof(int));
+	int *freq = malloc(n * sizeof(int));	
 	
-	if (arrnum == NULL)
+	if (arrnum == NULL || freq == NULL)
 	{
 		printf("Memory Allocation FAILED!");
 		return 1;
@@ -20,31 +21,31 @@ int main()
 	{
 		printf("Num %d: ", i+1);
 		scanf("%d", &arrnum[i]);
-	}	
-
-	int test;
-	for (int i = 0; i < n; i ++)
-	{
-		test = arrnum[i];
-
-		for (int j = 0; j < n; j ++)	
-		{
-			if (test == arrnum[j])
-			{
-				printf("The unique num is: %d\n", test);
-				break;
-			}
-			else if (test != arrnum[j])
-			{
-				printf("The unique num is: %d", test);
-				break;
-			}
-			
-		}
-		
+		freq[i] = 0;
 	}
 
-	free(arrnum);	
+	for (int i = 0; i < n; i ++)
+	{
+		for (int j  = 0 ; j < n; j ++)	
+		{
+			if (arrnum[i] == arrnum[j])
+			{
+				freq[i]++;
+			}
+		}
+	}
+	
+ 	for (int i = 0; i < n; i ++)
+	{
+		if (freq[i] == 1)
+		{
+			printf("The unique number is %d\n", arrnum[i]);
+		}
+	}
+
+	free(arrnum);
+	free(freq);
+		
 	return 0;
 }
 
