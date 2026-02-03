@@ -1,0 +1,144 @@
+🟢 EASY (Foundational String Skills)
+Activity 1.1 – Manual String Length
+
+Objective: Understand null-terminated strings
+
+Task:
+Write a function my_strlen(char *s) that counts characters until '\0'.
+
+Requirements:
+
+Use a loop
+
+Do not use strlen()
+
+Sample Input:
+
+Hello
+
+
+Expected Output:
+
+Length: 5
+
+Activity 1.2 – String Copy
+
+Objective: Practice array indexing and pointers
+
+Task:
+Write a function my_strcpy(char *dest, char *src) that copies src to dest.
+
+Requirements:
+
+Copy character-by-character
+
+Add the null terminator manually
+
+Activity 1.3 – Count Vowels in a String
+
+Objective: Character comparison
+
+Task:
+Count how many vowels (a e i o u, lowercase only) are in a string.
+
+Hint:
+Use if statements and a loop.
+
+🟡 INTERMEDIATE (Dynamic Memory + Strings)
+Activity 2.1 – Dynamic String Input
+
+Objective: Combine malloc with strings
+
+Task:
+Ask the user for a word length, then:
+
+Allocate memory dynamically
+
+Read the string
+
+Print the string
+
+Requirement:
+
+Use malloc
+
+Use free
+
+Activity 2.2 – Reverse a String (In Place)
+
+Objective: Index-based string manipulation
+
+Task:
+Reverse a string without creating a second array.
+
+Example:
+
+Input: hello
+Output: olleh
+
+Activity 2.3 – Concatenate Two Strings (Manual)
+
+Objective: Understand memory layout
+
+Task:
+Write my_strcat(char *s1, char *s2) that appends s2 to the end of s1.
+
+Constraints:
+
+s1 has enough space
+
+Do not use strcat()
+
+🔴 HARD (Thinking + Memory Safety)
+Activity 3.1 – Dynamic String Duplicate
+
+Objective: Safe dynamic memory allocation
+
+Task:
+Write my_strdup(char *s) that:
+
+Allocates exact memory
+
+Copies the string
+
+Returns the new pointer
+
+Activity 3.2 – Remove All Spaces
+
+Objective: Modify strings safely
+
+Task:
+Remove all spaces from a string without using another array.
+
+Example:
+
+Input: "c string activity"
+Output: "cstringactivity"
+
+Activity 3.3 – Split String into Words
+
+Objective: Pointer arrays + dynamic memory
+
+Task:
+Split a string into words (separated by spaces) and store each word dynamically.
+
+Output Example:
+
+Word 1: c
+Word 2: string
+Word 3: activity
+
+
+Constraints:
+
+Use malloc
+
+Free all memory
+
+🧠 Assessment Mapping (For Academic Use)
+Level	Skills Developed
+Easy	String basics, loops, null terminators
+Intermediate	Dynamic memory, indexing, mutation
+Hard	Memory safety, abstraction, pointers
+
+If you want, I can:
