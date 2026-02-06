@@ -5,20 +5,27 @@
 
 int main()
 {
-
 	char strTemp[BUFF];
 	printf("Type your word here: ");
-	scanf("%c", strTemp);
+	fgets(strTemp, BUFF, stdin);
 
-	int count = 0;
-	int i = 0;
-	while (strTemp[i] != '\0')
+	int count = -1;
+	for (int i = 0; i < BUFF; i ++)
 	{
+		if (strTemp[i] == '\0')
+		{
+			break;
+		}
 		count++;
-		i++;
 	}
 
-	printf("Count is %d\n", count);
+	printf("The reverese of the word %s: ", strTemp);
+	for (int i  = count; i >= 0; i--)
+	{
+		printf("%c", strTemp[i]);
+	}	
+
+	printf("\n");	
 
 	return 0;
 
