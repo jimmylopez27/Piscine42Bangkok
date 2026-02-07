@@ -3,10 +3,25 @@
 
 #define BUFF 20
 
-char my_strcat(char *s1, char *s2) 
+char *my_strcat(char *s1, char *s2) 
 { 
-	*s1 = *s1 + *s2;
-	return *s1;
+	char *p = s1;
+	
+	while (*p != '\0')
+	{
+		p++;	
+	} 
+
+	while (*s2 != '\0')
+	{
+		*p = *s2;
+		p++;
+		s2++;
+	}
+
+	*p = '\0';
+
+	return s1;
 }
 
 int main()
@@ -15,14 +30,14 @@ int main()
 	char word2[BUFF];
 
 	printf("Type your first word: ");
-	fgets(word1, BUFF, stdin);
+	scanf("%s", word1);
 
 	printf("Type your second word: ");
-	fgets(word2, BUFF, stdin);
+	scanf("%s", word2);
 
 	my_strcat(word1, word2);
 
-	printf("The new word is: %s", word1);
+	printf("The new word is: %s\n", word1);
 	
 	return 0;
 }
