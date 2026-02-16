@@ -6,18 +6,17 @@ char *space_rem(char *s)
 {
 	char *read = s;
 	char *write = s;
-		
+	
 	while (*read != '\0')
 	{
-		if (*read != ' ')
+		
+		if (*s == ' ')
 		{
-			*write = *read;
 			write++;
 		}
-
-		read++;	
-	}
-
+		s++;
+		}
+	
 	*write = '\0';
 
 	return s;
@@ -26,13 +25,13 @@ char *space_rem(char *s)
 int main()
 {
 	char word[BUFF];
-	
 	printf("Type your word here: ");
 	fgets(word, BUFF, stdin);
+	printf("The word you type is: %s", word);
 
-	printf("This is the original word: %s", word);
-	char *newWord = space_rem(word);
-	printf("This is the new word: %s", newWord);	
-	
-	return 0;	
+	space_rem(word);
+	printf("Your new word is: %s", word);
+
+	return 0;
+
 }
