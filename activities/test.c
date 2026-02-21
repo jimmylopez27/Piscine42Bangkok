@@ -1,25 +1,23 @@
 #include <stdio.h>
 
-void  swap(int *m, int *n)
-{
-	int temp = *m;
-	*m = *n;
-	*n = temp;
-
-}
 
 int main()
 {
+
+	char *str = "Hello World";
+	int count = 1;
+
+	while (*str != '\0')
+	{
+		if (*str == ' ')
+		{
+			str++;
+		}
+		
+		str++;
+	}
 	
-	int numA = 6;
-	int numB = 3;
-
-	printf("The original numbers: numA = %d, numB = %d\n", numA, numB);
-
-	swap(&numA, &numB);
-
-	printf("The new position: numA = %d, numB = %d\n", numA, numB);
-
+	printf("The total char in the word %s is: %d\n", str, count);
 	return 0;	
 
 }

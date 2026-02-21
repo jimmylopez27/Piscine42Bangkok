@@ -2,36 +2,39 @@
 
 #define BUFF 20
 
-char *space_rem(char *s)
+char space_rem(char *s)
 {
 	char *read = s;
 	char *write = s;
-	
+
 	while (*read != '\0')
 	{
-		
-		if (*s == ' ')
+		if (*s != ' ')
 		{
-			write++;
+			s++; 
 		}
-		s++;
-		}
-	
-	*write = '\0';
+		
+		write = s;
+		
+		read++;
+	}
 
-	return s;
+	write = '\0';	
+	
+	return *write;
 }
 
 int main()
 {
 	char word[BUFF];
-	printf("Type your word here: ");
+	printf("Type your text here: ");
 	fgets(word, BUFF, stdin);
-	printf("The word you type is: %s", word);
-
-	space_rem(word);
-	printf("Your new word is: %s", word);
+	printf("This is your word: %s", word);
+	
+	char newword[BUFF];
+	
+	*newword = space_rem(word);
+	printf("The new word is: %s", newword);
 
 	return 0;
-
 }
