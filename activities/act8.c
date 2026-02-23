@@ -2,26 +2,23 @@
 
 #define BUFF 20
 
-char space_rem(char *s)
+void space_rem(char *s, char *write)
 {
-	char *read = s;
-	char *write = s;
+	int counter1 = 0;
+	int counter2 = 0;
 
-	while (*read != '\0')
+	while(s[counter1] != '\0')
 	{
-		if (*s != ' ')
+		if(s[counter1] != ' ')
 		{
-			s++; 
+			write[counter2] = s[counter1];
+			counter2++;
 		}
 		
-		write = s;
-		
-		read++;
+		counter1++;
 	}
 
-	write = '\0';	
-	
-	return *write;
+	write[counter2] = '\0';
 }
 
 int main()
@@ -33,7 +30,7 @@ int main()
 	
 	char newword[BUFF];
 	
-	*newword = space_rem(word);
+	space_rem(word, newword);
 	printf("The new word is: %s", newword);
 
 	return 0;

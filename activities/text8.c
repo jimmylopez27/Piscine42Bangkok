@@ -2,36 +2,29 @@
 
 #define BUFF 20
 
-char *space_rem(char *s)
-{
-	char *temp = s;
-
-	while(*s != '\0')
-	{
-		if (*s != ' ')
-		{
-			*temp = *s;
-			temp++;
-			s++;
-		}
-
-	}
-	
-	*temp = '\0'; 
-
-	return temp;
-}
-
 int main()
 {
-	char word[BUFF];
-	printf("Type your word here: ");
-	fgets(word, BUFF, stdin);
+	char *word = "hello world";
+	int count = 0;
+	char new_word[BUFF];
 
-	printf("This is your word: %s", word);
+	while (word[count] != '\0')
+	{	
 	
-	char *newWord = space_rem(word);
-	printf("This is your new word: %s\n", newWord);
-	 
+		if(word[count] != ' ')
+		{
+		 	new_word[count] = word[count];
+		}
+		
+		printf("The new_word %d is: %c\n", count, new_word[count]);
+				
+		printf("The address of %c is: %p\n", word[count], word);
+		count++;
+		
+	}
+
+
+	printf("new_word is : %s", new_word);
+
 	return 0;
 }

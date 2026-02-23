@@ -103,7 +103,7 @@ Copies the string
 
 Returns the new pointer
 
-Activity 3.2 – Remove All Spaces
+ 3.2 – Remove All Spaces
 
 Objective: Modify strings safely
 
