@@ -1,144 +1,173 @@
-🟢 EASY (Foundational String Skills)
-Activity 1.1 – Manual String Length
+Got it 👍—here’s the **same engaging version**, completely text-based and clean for classroom or module use.
 
-Objective: Understand null-terminated strings
+---
 
-Task:
-Write a function my_strlen(char *s) that counts characters until '\0'.
+# 🎮 STRING ADVENTURE: “Escape the Broken Program”
 
-Requirements:
+## 🟢 EASY – *Code Detective Missions*
 
-Use a loop
-
-Do not use strlen()
-
-Sample Input:
-
-Hello
+---
 
 
-Expected Output:
 
-Length: 5
+### 🕵️ Mission 2 – Copy Cat Gone Wrong
 
-Activity 1.2 – String Copy
+**Objective:** Practice string copying
 
-Objective: Practice array indexing and pointers
+**Story:**
+A copying robot forgot something important.
 
-Task:
-Write a function my_strcpy(char *dest, char *src) that copies src to dest.
+**Task:**
+Fix a broken string copy function.
 
-Requirements:
+**Requirements:**
 
-Copy character-by-character
+* Copy character-by-character
+* Ensure correct termination
+* Do not use built-in functions
 
-Add the null terminator manually
+---
 
-Activity 1.3 – Count Vowels in a String
+### 🎯 Mission 3 – Vowel Hunter Game
 
-Objective: Character comparison
+**Objective:** Character comparison and counting
 
-Task:
-Count how many vowels (a e i o u, lowercase only) are in a string.
+**Task:**
+Count vowels and compute a score:
 
-Hint:
-Use if statements and a loop.
+* a = 1
+* e = 2
+* i = 3
+* o = 4
+* u = 5
 
-🟡 INTERMEDIATE (Dynamic Memory + Strings)
-Activity 2.1 – Dynamic String Input
+**Example Output:**
 
-Objective: Combine malloc with strings
+```
+Score: 11
+```
 
-Task:
-Ask the user for a word length, then:
+---
 
-Allocate memory dynamically
+## 🟡 INTERMEDIATE – *Build & Play Challenges*
 
-Read the string
+---
 
-Print the string
+### 🧩 Challenge 1 – Secret Word Generator
 
-Requirement:
+**Objective:** Dynamic memory allocation
 
-Use malloc
+**Task:**
 
-Use free
+* Ask the user for a length
+* Allocate memory using `malloc`
+* Fill the string with characters
 
-Activity 2.2 – Reverse a String (In Place)
+**Constraint:**
 
-Objective: Index-based string manipulation
+* No repeated letters allowed
 
-Task:
-Reverse a string without creating a second array.
+---
 
-Example:
+### 🔄 Challenge 2 – Mirror Machine
 
-Input: hello
-Output: olleh
+**Objective:** String manipulation
 
-Activity 2.3 – Concatenate Two Strings (Manual)
+**Task:**
+Reverse a string and display both versions.
 
-Objective: Understand memory layout
+**Example:**
 
-Task:
-Write my_strcat(char *s1, char *s2) that appends s2 to the end of s1.
+```
+hello | olleh
+```
 
-Constraints:
+**Bonus:**
+Check if the string is a palindrome
 
-s1 has enough space
+---
 
-Do not use strcat()
+### 🧪 Challenge 3 – String Fusion Lab
 
-🔴 HARD (Thinking + Memory Safety)
-Activity 3.1 – Dynamic String Duplicate
+**Objective:** Understand indexing and merging
 
-Objective: Safe dynamic memory allocation
+**Task:**
+Merge two strings alternately
 
-Task:
-Write my_strdup(char *s) that:
+**Example:**
 
-Allocates exact memory
+```
+abc + XYZ → aXbYcZ
+```
 
-Copies the string
+---
 
-Returns the new pointer
+## 🔴 HARD – *Boss Level Problems*
 
- 3.2 – Remove All Spaces
+---
 
-Objective: Modify strings safely
+### 💣 Boss 1 – Clone Machine
 
-Task:
-Remove all spaces from a string without using another array.
+**Objective:** Safe dynamic memory usage
 
-Example:
+**Task:**
 
-Input: "c string activity"
-Output: "cstringactivity"
+* Duplicate a string using dynamic memory
+* Print both original and copy
 
-Activity 3.3 – Split String into Words
+**Requirement:**
+Modifying the copy must not affect the original
 
-Objective: Pointer arrays + dynamic memory
+---
 
-Task:
-Split a string into words (separated by spaces) and store each word dynamically.
+### ✂️ Boss 2 – String Cleaner 3000
 
-Output Example:
+**Objective:** In-place string modification
 
-Word 1: c
-Word 2: string
-Word 3: activity
+**Task:**
+Remove:
 
+* spaces
+* numbers
 
-Constraints:
+**Example:**
 
-Use malloc
+```
+Input:  "c0 str1ng 123"
+Output: "cstring"
+```
 
-Free all memory
+---
 
-🧠 Assessment Mapping (For Academic Use)
-Level	Skills Developed
-Easy	String basics, loops, null terminators
-Intermediate	Dynamic memory, indexing, mutation
-Hard	Memory safety, abstraction, pointers
+### 🧠 Boss 3 – Word Token Arena
 
-If you want, I can:
+**Objective:** Advanced pointers and memory handling
+
+**Task:**
+
+* Split a sentence into words
+* Store each word dynamically
+
+**Output Requirements:**
+
+* Print all words
+* Print longest word
+* Print shortest word
+
+---
+
+## 🎓 Assessment Mapping (For Academic Use)
+
+| Level        | Skills Developed                           |
+| ------------ | ------------------------------------------ |
+| Easy         | String basics, null terminators, debugging |
+| Intermediate | Dynamic memory, indexing, manipulation     |
+| Hard         | Memory safety, pointers, abstraction       |
+
+---
+
+If you want next, I can upgrade this into:
+
+* A **gamified scoring system (points, leaderboard)**
+* A **rubric aligned with Bloom’s Taxonomy**
+* Or a **ready-to-print student worksheet (thesis-friendly format)**
