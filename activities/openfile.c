@@ -18,7 +18,7 @@ void int_to_char(int num_length, char *str_length)
 {
 	int n = num_length;
 	int m = 0;
-	int i = 0;
+		int i = 0;
 
 	if(num_length == 0)
 	{
