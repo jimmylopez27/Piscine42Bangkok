@@ -1,35 +1,39 @@
 #include <unistd.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-#define HEIGHT 20
-#define WIDTH 100
 
 #define BUFF 200
 
 void plot(int x, int y);
-int char_int(int str_num);
+int char_int(char *str_num);
 
 int main()
 {
-	char x;
-	char y;
-	char buff;
+	char x[BUFF], y[BUFF];
+	int bytes;
+
 	write(1, "x coordinate: ", 14);
-	read(0, &x, 1);
-	read(0, &buff, 1);	
+	bytes = read(0, x, BUFF - 1);
+	if(bytes > 0 && x[bytes -1] == '\n')
+	{
+		x[bytes - 1] = '\0';
+	}
+	else x[bytes] = '\0';
+		
+	
 
 	write(1, "y coordinate: ", 14);
-	read(0, &y, 1);
-	read(0, &buff, 1);
+	bytes = read(0, y, BUFF - 1);	
+	if(bytes > 0 && y[bytes -1] == '\n')
+	{
+		y[bytes - 1] = '\0';
+	}
+	else y[bytes] = '\0';
+	
 
 	int x_int = char_int(x);
 	int y_int = char_int(y);
 	
 
-//	printf("X = %d and Y = %d\n", x_int, y_int);
-//	plot(x_int, y_int);	
+	plot(x_int, y_int);	
 
 
 	return 0;
@@ -37,61 +41,41 @@ int main()
 
 
 
-int char_int(int str_num)
+int char_int(char *str_num)
 {
-	char temp = str_num;
-	int count = 0;
+	int int_num = 0;
+	int i = 0;	
 
-	while(temp != NULL)
+	while(str_num[i] >= '0' && str_num[i] <= '9')
 	{
-		count++;
-		temp++;	
-	}	 
-
-	int int_num;
-	
-	while(count > 0)
-	{
-		int_num = (str_num % 10) + '0';
-		count--;
-		int_num++;
-		str_num = str_num / 10;
+		int_num = int_num * 10 + (str_num[i] - '0');
+		i++;
 	}
 	
 	return int_num;
 }
 
-
 void plot(int x, int y)
 {
+   int ycounter = 0;
+
+    while (ycounter <= y)
+    {
         int xcounter = 0;
-        int ycounter = 0;
 
-        while(ycounter <= y)
+        while (xcounter <= x)
         {
+            if (xcounter == x && ycounter == y)
+                write(1, "#", 1);
+            else
+                write(1, " ", 1);
 
-                if(ycounter == y)
-                {
-                        while(xcounter <= x)
-                        {
-                                if(xcounter == x)
-                                {
-                                        write(1, "#", 1);
-                                        write(1, "\n", 1);
-                                }
-                                else
-                                {
-                                        write(1, " ", 1);
-                                }
-                                xcounter++;
-                        }
-                }
-                else
-                {
-                        write(1, "\n", 1);
-                }
-
-                ycounter++;
+            xcounter++;
         }
 
+        write(1, "\n", 1);
+        ycounter++;
+    }
 }
+
+
