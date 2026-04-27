@@ -75,7 +75,9 @@ void plot(int x, int y)
 
         write(1, "\n", 1);
         ycounter++;
-    }
+   }
+	
+	
 }
 
 
